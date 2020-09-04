@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html {background: #f7f7f7;}
+        body {margin: 48px auto 0; padding-top: 12px; padding-left: 24px;}
+        body {background: #fff; border: solid 1px #333; width: 640px;}
+        .result {color: #F06060; font-size: 30px; font-weight: bold; margin-left: 2rem;}
+        div {border-bottom: solid 2px #333; width: 300px;}
+    </style>
+</head>
+<body>
+    <h1>JavaScriptでランダムな文字列を生成する</h1>
+    <div>
+        <script>
+            'use strict';
+            function make_random_string() {
+                const num_of_char = 6;
+                let random;
+                let str1 = "";
+                for (let i = 0; i < num_of_char; i++)
+                {
+                    random = Math.floor( Math.random () * 26 + "a".charCodeAt(0));
+                    str1 += String.fromCharCode(random);
+                }
+                console.log(str1);
+                document.write("<span>生成文字列 => </span>");
+                document.write("<span class = result>" + str1 + "</span>");
+            }
+            make_random_string();
+        </script>
+    </div>
+    <p>(a ~ zから重複あり6文字)</p>
+    <p>console.logにも表示されています。</p>
+</body>
+</html>
