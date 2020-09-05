@@ -1,3 +1,5 @@
 <?php
-    echo substr(str_shuffle('abcdefghijklmnopqrstuvwxyz'), 0, 8) . "\n";
+    for ($i = 0; $i < 6; $i++)
+        echo substr(str_shuffle('abcdefghijklmnopqrstuvwxyz'), 0, 1);
+    echo "\n"
 ?>
